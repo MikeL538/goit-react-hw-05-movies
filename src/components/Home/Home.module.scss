@@ -1,0 +1,12 @@
+.list {
+  margin: 50px 100px;
+
+  > li {
+    font-size: 20px;
+    margin-bottom: 15px;
+
+    > a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,15 +1,15 @@
 {
-  "name": "goit-react-hw-04-feedback",
+  "name": "goit-react-hw-05-movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mikel538.github.io/goit-react-hw-04-feedback/",
+  "homepage": "https://mikel538.github.io/goit-react-hw-05-movies/",
   "dependencies": {
     "depcheck": "^1.4.7",
     "eslint-config-react-app": "^7.0.1",
-    "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "sass": "^1.69.4"
   },
   "scripts": {
     "start": "react-scripts start",
