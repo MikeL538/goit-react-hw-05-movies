@@ -1,8 +1,8 @@
 colors:
 Background= #283b42
-HeaderBtns= 2c93cf
+Color= #2c93cf
 
 + colors:
-Pistachio = #d1dddb
+Pistachio = #d1dddb = ActiveHeader,
 cerulean = #1d6a96
-turquoise = #85b8cb
+turquoise = #85b8cb = Hovers,

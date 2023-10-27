@@ -1,12 +1,12 @@
 .list {
   border-bottom: 1px solid #2c93cf;
   display: flex;
-  gap: 18px;
+  gap: 25px;
   list-style: none;
-  padding: 25px 20px 20px 40px;
+  padding: 25px 20px 20px 80px;
 
   > li {
-    > button {
+    > a {
       background-color: #283b42;
       border-radius: 8px;
       border: none;
@@ -15,11 +15,16 @@
       font-size: 24px;
       font-weight: 700;
       padding: 2px;
+      text-decoration: none;
 
-      &:hover,
-      &:focus {
-        transform: scale(1.2);
+      &:hover {
+        color: #85b8cb;
       }
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
     }
   }
 }
