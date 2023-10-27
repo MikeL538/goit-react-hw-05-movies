@@ -1,5 +1,6 @@
+@import '../utils/vars';
+
 .container {
-  align-items: center;
   display: flex;
   flex-direction: column;
 
@@ -12,21 +13,22 @@
     flex-direction: column;
     flex-wrap: wrap;
     font-size: 18px;
-    max-height: 400px;
-    margin-right: 60px;
+    height: 410px;
+    list-style: decimal inside;
+    max-width: max-content;
 
     > li {
       margin-bottom: 15px;
       margin-right: 50px;
-      max-width: 250px;
+      max-width: 270px;
 
       > a {
-        color: #2c93cf;
+        color: c('color');
         text-decoration: none;
 
         &:hover,
         &:focus {
-          color: #85b8cb;
+          color: c('hover');
         }
       }
     }

@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { Home } from './Home/Home';
 import { Film } from './Film/Film';
-
-import { Movies } from './Movies/Movies';
+import { Favourites } from './Favourites/Favourites';
 import { NotFound } from './NotFound/NotFound';
 import css from './App.module.scss';
 
@@ -14,9 +13,9 @@ export const App = () => {
       <Header />
       <div className={css.container}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/film" element={<Film />} />
+          <Route path="/trending" element={<Home />} />
+          <Route path="/favourites" element={<Favourites />} />
+          <Route path="/film/:movieId/*" element={<Film />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

@@ -14,14 +14,11 @@ export const Header = () => {
     <nav>
       <ul className={css.list}>
         <li>
-          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/trending">Home</StyledLink>
         </li>
         <li>
-          <StyledLink to="/movies">Movies</StyledLink>
+          <StyledLink to="/favourites">Favourites</StyledLink>
         </li>
-        {/* <li>
-          <StyledLink to="/film">Film</StyledLink>
-        </li> */}
       </ul>
     </nav>
   );

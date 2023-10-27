@@ -1,5 +1,10 @@
+@import '../utils/vars';
+
+nav {
+  border-bottom: 1px solid c('color');
+}
+
 .list {
-  border-bottom: 1px solid #2c93cf;
   display: flex;
   gap: 25px;
   list-style: none;
@@ -7,10 +12,10 @@
 
   > li {
     > a {
-      background-color: #283b42;
+      background-color: c('background');
       border-radius: 8px;
       border: none;
-      color: #2c93cf;
+      color: c('color');
       cursor: pointer;
       font-size: 24px;
       font-weight: 700;
@@ -18,7 +23,7 @@
       text-decoration: none;
 
       &:hover {
-        color: #85b8cb;
+        color: c('hover');
       }
     }
 

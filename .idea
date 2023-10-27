@@ -4,5 +4,5 @@ Color= #2c93cf
 
 + colors:
 Pistachio = #d1dddb = ActiveHeader,
-cerulean = #1d6a96
+cerulean = #1d6a96 = Shadows
 turquoise = #85b8cb = Hovers,
