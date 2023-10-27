@@ -1,14 +1,33 @@
-.list {
-  > li {
-    font-size: 20px;
-    margin-bottom: 15px;
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 
-    > a {
-      text-decoration: none;
-      color: #2c93cf;
+  > h1 {
+    margin-bottom: 25px;
+  }
 
-      &:hover {
-        color: #85b8cb;
+  > ol {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 18px;
+    max-height: 400px;
+    margin-right: 60px;
+
+    > li {
+      margin-bottom: 15px;
+      margin-right: 50px;
+      max-width: 250px;
+
+      > a {
+        color: #2c93cf;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: #85b8cb;
+        }
       }
     }
   }

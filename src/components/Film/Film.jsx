@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes, useParams } from 'react-router-dom';
 import css from './Film.module.scss';
+import { Reviews } from 'components/Reviews/Reviews';
+import { Cast } from 'components/Cast/Cast';
 
 export const Film = () => {
+  const { filmId } = useParams();
+
   return (
     <>
       <div className={css.container}>
@@ -27,13 +31,18 @@ export const Film = () => {
         <p>Additional information</p>
         <ul>
           <li>
-            <Link to={'/cast'}>Cast</Link>
+            <Link to={`film/cast`}>Cast</Link>
           </li>
           <li>
-            <Link to={'/reviews'}>Reviews</Link>
+            <Link to={`film/reviews`}>Reviews</Link>
           </li>
         </ul>
       </div>
+
+      <Routes>
+        <Route path="cast" element={<Cast />} />
+        <Route path="reviews" element={<Reviews />} />
+      </Routes>
     </>
   );
 };

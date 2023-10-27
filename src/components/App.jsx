@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { Home } from './Home/Home';
 import { Film } from './Film/Film';
+
 import { Movies } from './Movies/Movies';
 import { NotFound } from './NotFound/NotFound';
 import css from './App.module.scss';

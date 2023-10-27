@@ -12,7 +12,7 @@ https://mikel538.github.io/goit-react-hw-05-movies/
 1. Clone the repository to your local machine: git clone
    https://github.com/MikeL538/goit-react-hw-05-movies.git
 
-2. Change into the project directory: cd react-feedback-app
+2. Change into the project directory: cd react-movies-database-app
 
 3. Install the required dependencies: npm install
 

@@ -19,9 +19,9 @@ export const Header = () => {
         <li>
           <StyledLink to="/movies">Movies</StyledLink>
         </li>
-        <li>
+        {/* <li>
           <StyledLink to="/film">Film</StyledLink>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
