@@ -7,26 +7,30 @@ nav {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: 0 auto 5px auto;
+    margin: 0 auto 10px auto;
+    width: 250px;
+    position: relative;
 
     > input {
-      background-color: c('activeHeader');
+      background-color: c('input');
       border-radius: 5px;
       border: none;
-      color: c('background');
+      color: c('color');
       display: flex;
-      padding: 3px 5px;
-      width: 200px;
+      padding: 3px 53px 5px 3px;
+      width: 250px;
     }
 
     > button {
-      background-color: c('activeHeader');
+      background-color: c('input');
       border-radius: 5px;
       border: c('background');
       color: c('color');
       cursor: pointer;
-      margin-left: 5px;
+      margin-left: 1px;
       padding: 3px;
+      position: absolute;
+      right: 5px;
     }
   }
 }

@@ -1,20 +1,22 @@
 import { NavLink } from 'react-router-dom';
+import { useRef } from 'react';
 import styled from 'styled-components';
 import css from './Header.module.scss';
 
 const StyledLink = styled(NavLink)`
-  color: #2c93cf;
+  color: red;
 
   &.active {
-    color: #d1dddb;
+    color: #feb75d;
   }
 `;
-const input = document.getElementById('searchInput');
 
 export const Header = () => {
+  const inputRef = useRef(null);
+
   const hadnleSearch = e => {
     e.preventDefault();
-    input.value = '';
+    inputRef.current.value = '';
   };
 
   return (
@@ -32,6 +34,7 @@ export const Header = () => {
       </ul>
       <form onSubmit={hadnleSearch}>
         <input
+          ref={inputRef}
           id="searchInput"
           type="text"
           placeholder="Search, not implemented"

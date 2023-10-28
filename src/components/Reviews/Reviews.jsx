@@ -24,12 +24,18 @@ export const Reviews = () => {
   return (
     <div className={css.container}>
       <ul>
-        {selectedMovie.results.map(review => (
-          <li key={review.id}>
-            <h4>{review.author}</h4>
-            <p>{review.content}</p>
+        {selectedMovie.results.length === 0 ? (
+          <li>
+            <p>No reviews found.</p>
           </li>
-        ))}
+        ) : (
+          selectedMovie.results.map(review => (
+            <li key={review.id}>
+              <h4>{review.author}</h4>
+              <p>{review.content}</p>
+            </li>
+          ))
+        )}
       </ul>
     </div>
   );

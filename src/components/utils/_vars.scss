@@ -1,10 +1,14 @@
 $c: (
-  /* +Search form color */ 'background': #283b42,
-  'color': #2c93cf,
-  /* +Shadows */ 'activeHeader': #d1dddb,
-  'hover': #85b8cb,
-
-  'input': #1d6a96
+  // /* +Search form color */ 'background': #283b42,
+  // 'color': #2c93cf,
+  // /* +Shadows */ 'activeHeader': #d1dddb,
+  // 'hover': #85b8cb,
+  // 'input': #1d6a96
+  /* +Search form color */ 'background': #000e2b,
+  'color': #dfdfdf,
+  /* +Shadows */ 'activeHeader': #feb75d,
+  'hover': #55c9ea,
+  'input': #013b63
 );
 
 @function c($key) {

@@ -25,15 +25,20 @@ export const Cast = () => {
       <ul>
         {selectedMovie.cast.map(credit => (
           <li key={credit.id}>
-            {' '}
-            {credit.profile_path ? (
-              <img
-                src={`https://image.tmdb.org/t/p/w185/${credit.profile_path}`}
-                alt={`${credit.name} Profile`}
-              />
-            ) : (
-              <img src="./no-photo.jpg" alt="No source found" />
-            )}
+            <a
+              href={`https://google.com/search?q=${credit.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {credit.profile_path ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w185/${credit.profile_path}`}
+                  alt={`${credit.name} Profile`}
+                />
+              ) : (
+                <img src="./no-photo.jpg" alt="No source found" />
+              )}
+            </a>
             <p>
               {credit.name} as {credit.character}
             </p>

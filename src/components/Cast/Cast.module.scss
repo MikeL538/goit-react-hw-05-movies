@@ -1,3 +1,5 @@
+@import '../utils/vars';
+
 .container {
   margin: 20px 0;
 
@@ -17,14 +19,23 @@
       height: 220px;
       margin: 20px;
 
-      > img {
-        border: 1px solid;
+      > a {
+        color: c('color');
         width: 125px;
         height: 186px;
         margin-right: 5px;
         border-radius: 10px;
-      }
+        border: 1px solid;
+        text-decoration: none;
+        overflow: hidden;
 
+        > img {
+          width: 125px;
+          height: 186px;
+          margin-right: 5px;
+          border-radius: 10px;
+        }
+      }
       > p {
         max-width: 125px;
         text-align: center;
