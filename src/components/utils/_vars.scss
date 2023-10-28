@@ -1,10 +1,10 @@
 $c: (
-  'background': #283b42,
+  /* +Search form color */ 'background': #283b42,
   'color': #2c93cf,
   /* +Shadows */ 'activeHeader': #d1dddb,
   'hover': #85b8cb,
 
-  'empty': #1d6a96,
+  'input': #1d6a96
 );
 
 @function c($key) {

@@ -3,9 +3,11 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   > h1 {
-    margin-bottom: 25px;
+    text-align: center;
+    margin: 20px 0;
   }
 
   > ol {
@@ -15,15 +17,50 @@
     font-size: 18px;
     height: 410px;
     list-style: decimal inside;
+    margin-bottom: 30px;
     max-width: max-content;
 
     > li {
       margin-bottom: 15px;
       margin-right: 50px;
-      max-width: 270px;
+      max-width: 310px;
 
       > a {
         color: c('color');
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: c('hover');
+        }
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 3px outset;
+  margin: 0 -80px;
+
+  > ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    padding: 25px 20px 0 20px;
+    min-width: 750px;
+
+    > li {
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
+      }
+
+      > a {
+        color: c('color');
+        font-size: 40px;
+        font-weight: 700;
         text-decoration: none;
 
         &:hover,

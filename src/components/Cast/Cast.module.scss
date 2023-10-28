@@ -1,0 +1,34 @@
+.container {
+  margin: 20px 0;
+
+  > ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: left;
+    list-style: none;
+    max-width: 900px;
+
+    > li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 220px;
+      margin: 20px;
+
+      > img {
+        border: 1px solid;
+        width: 125px;
+        height: 186px;
+        margin-right: 5px;
+        border-radius: 10px;
+      }
+
+      > p {
+        max-width: 125px;
+        text-align: center;
+      }
+    }
+  }
+}

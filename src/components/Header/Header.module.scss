@@ -1,14 +1,43 @@
 @import '../utils/vars';
 
 nav {
-  border-bottom: 1px solid c('color');
+  border-bottom: 3px inset;
+
+  > form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 5px auto;
+
+    > input {
+      background-color: c('activeHeader');
+      border-radius: 5px;
+      border: none;
+      color: c('background');
+      display: flex;
+      padding: 3px 5px;
+      width: 200px;
+    }
+
+    > button {
+      background-color: c('activeHeader');
+      border-radius: 5px;
+      border: c('background');
+      color: c('color');
+      cursor: pointer;
+      margin-left: 5px;
+      padding: 3px;
+    }
+  }
 }
 
 .list {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 25px;
   list-style: none;
-  padding: 25px 20px 20px 80px;
+  padding: 25px 0 20px 0;
 
   > li {
     > a {
