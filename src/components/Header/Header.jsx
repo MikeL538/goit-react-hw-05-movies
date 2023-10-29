@@ -21,6 +21,7 @@ export const Header = () => {
 
     if (query) {
       navigate(`/Search?query=${query}`);
+      window.location.reload();
     }
 
     inputRef.current.value = '';
