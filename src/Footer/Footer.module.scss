@@ -1,0 +1,35 @@
+@import '../components/utils/vars';
+
+footer {
+  border-top: 3px outset;
+  margin: 0 -80px;
+
+  > ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    padding: 25px 20px 0 20px;
+    min-width: 750px;
+
+    > li {
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
+      }
+
+      > a {
+        color: c('color');
+        font-size: 40px;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: c('hover');
+        }
+      }
+    }
+  }
+}

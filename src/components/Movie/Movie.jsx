@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { Cast } from 'components/Cast/Cast';
 import { Link, Route, Routes, useParams } from 'react-router-dom';
 import { Reviews } from 'components/Reviews/Reviews';
-import { Cast } from 'components/Cast/Cast';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import css from './Movie.module.scss';
 
-import css from './Film.module.scss';
-
-export const Film = () => {
+export function Movie() {
   const { movieId } = useParams();
 
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -47,10 +46,10 @@ export const Film = () => {
       <div className={css.containerAdditional}>
         <ul>
           <li>
-            <Link to={`/film/${movieId}/cast`}>Cast</Link>
+            <Link to={`/movie/${movieId}/cast`}>Cast</Link>
           </li>
           <li>
-            <Link to={`/film/${movieId}/reviews`}>Reviews</Link>
+            <Link to={`/movie/${movieId}/reviews`}>Reviews</Link>
           </li>
         </ul>
       </div>
@@ -63,4 +62,4 @@ export const Film = () => {
   ) : (
     <div>Loading...</div>
   );
-};
+}

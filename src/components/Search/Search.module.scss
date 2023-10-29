@@ -1,0 +1,57 @@
+@import '../utils/vars';
+
+.container {
+  min-height: 368px;
+  min-width: 900px;
+  position: relative;
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 18px;
+    list-style: inside;
+    margin: 50px;
+    max-height: 400px;
+
+    > li {
+      margin-bottom: 15px;
+      margin-right: 50px;
+      max-width: 260px;
+      white-space: wrap;
+
+      > a {
+        color: c('color');
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: c('hover');
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  position: absolute;
+  bottom: -50px;
+  left: 39%;
+
+  > button {
+    cursor: pointer;
+    border: none;
+    background-color: c('input');
+    border-radius: 5px;
+    padding: 3px;
+    color: c('color');
+    margin: 0 7px;
+
+    &:hover,
+    &:focus {
+      background-color: c('hover');
+      color: c('background');
+      transform: scale(1.1);
+    }
+  }
+}
