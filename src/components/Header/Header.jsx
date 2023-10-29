@@ -11,17 +11,17 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
-export const Header = () => {
+export const Header = ({ resetCurrentPage }) => {
   const inputRef = useRef(null);
   const navigate = useNavigate();
 
-  const hadnleSearch = e => {
+  const handleSearch = e => {
     e.preventDefault();
     const query = inputRef.current.value;
 
     if (query) {
-      // Przekieruj na stronę Home i przekaż zapytanie jako parametr URL
       navigate(`/Search?query=${query}`);
+      resetCurrentPage();
     }
 
     inputRef.current.value = '';
@@ -33,7 +33,6 @@ export const Header = () => {
         <li>
           <StyledLink to="/home">Home</StyledLink>
         </li>
-
         <li>
           <StyledLink to="/favourites">Favourites</StyledLink>
         </li>
@@ -41,14 +40,14 @@ export const Header = () => {
           <StyledLink to="/categories">Categories</StyledLink>
         </li>
       </ul>
-      <form onSubmit={hadnleSearch}>
+      <form onSubmit={handleSearch}>
         <input
           ref={inputRef}
           id="searchInput"
           type="text"
           placeholder="Search"
         />
-        <button>Search</button>
+        <button type="submit">Search</button>
       </form>
     </nav>
   );

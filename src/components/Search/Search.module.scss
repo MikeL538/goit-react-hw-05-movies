@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     font-size: 18px;
     list-style: inside;
-    margin: 50px;
+    margin: 70px 50px;
     max-height: 400px;
 
     > li {
@@ -35,8 +35,8 @@
 
 .pagination {
   position: absolute;
-  bottom: -50px;
-  left: 39%;
+  top: -55px;
+  left: 40%;
 
   > button {
     cursor: pointer;
