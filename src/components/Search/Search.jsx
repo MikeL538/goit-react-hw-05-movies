@@ -2,16 +2,15 @@ import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import css from './Search.module.scss';
-import { Header } from 'components/Header/Header';
 
 export const Search = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [movies, setMovies] = useState([]);
-  // Got to disable this line or Github won't approve
   // eslint-disable-next-line
   const [totalResults, setTotalResults] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const location = useLocation();
+  let cancelToken;
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -21,15 +20,23 @@ export const Search = () => {
       const apiKey = 'd8ea0ad05a6720116583e1a3262a0452';
       const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&page=${currentPage}`;
 
+      // eslint-disable-next-line
+      cancelToken = axios.CancelToken.source();
+
       axios
-        .get(apiUrl)
+        .get(apiUrl, { cancelToken: cancelToken.token })
         .then(response => {
           setMovies(response.data.results);
           setTotalResults(response.data.total_results);
           setTotalPages(response.data.total_pages);
         })
         .catch(error => {
-          console.error('Error searching for movies:', error);
+          if (axios.isCancel(error)) {
+            console.log('Request canceled', error.message);
+          } else {
+            if (!cancelToken)
+              console.error('Error searching for movies:', error);
+          }
         });
     }
   }, [location.search, currentPage]);
@@ -45,12 +52,6 @@ export const Search = () => {
       setCurrentPage(currentPage - 1);
     }
   };
-
-  const resetCurrentPage = () => {
-    setCurrentPage(1);
-  };
-
-  <Header resetCurrentPage={resetCurrentPage} />;
 
   return (
     <div className={css.container}>

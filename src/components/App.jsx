@@ -35,7 +35,7 @@ export const App = () => {
         <div className={css.container}>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path="/home" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/favourites" element={<Favourites />} />
               <Route path="/movie/:movieId/*" element={<Movie />} />
               <Route path="/categories" element={<Categories />} />

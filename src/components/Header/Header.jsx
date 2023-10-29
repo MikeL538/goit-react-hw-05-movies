@@ -11,7 +11,7 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
-export const Header = ({ resetCurrentPage }) => {
+export const Header = () => {
   const inputRef = useRef(null);
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ export const Header = ({ resetCurrentPage }) => {
 
     if (query) {
       navigate(`/Search?query=${query}`);
-      resetCurrentPage();
+      window.location.reload();
     }
 
     inputRef.current.value = '';
@@ -31,7 +31,7 @@ export const Header = ({ resetCurrentPage }) => {
     <nav>
       <ul className={css.list}>
         <li>
-          <StyledLink to="/home">Home</StyledLink>
+          <StyledLink to="/">Home</StyledLink>
         </li>
         <li>
           <StyledLink to="/favourites">Favourites</StyledLink>

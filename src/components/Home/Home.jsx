@@ -20,7 +20,8 @@ export const Home = () => {
 
   useEffect(() => {
     fetchPopular();
-    // Got to disable this line or Github won't approve
+    // Got to disable this line or Github won't approve,
+    // it prevents from endless data download
     // eslint-disable-next-line
   }, []);
 

@@ -13,7 +13,6 @@ export const Reviews = () => {
     axios
       .get(movieUrl)
       .then(response => {
-        console.log(response.data);
         setSelectedMovie(response.data);
       })
       .catch(error => {
